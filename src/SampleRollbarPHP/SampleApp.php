@@ -6,7 +6,7 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\RollbarHandler;
 
-class App {
+class SampleApp {
 
 	private $log;
 
@@ -17,7 +17,7 @@ class App {
 		$this->log->pushHandler(new StreamHandler('php://stdout', Logger::INFO));
 
 		// Set up Rollbar
-		$config = array(
+        $config = array(
 		    // required
 		    'access_token' => 'eb2561a52efb4d4bba5a1d4b68be13e9',
 		    // optional - environment name. any string will do.
@@ -26,17 +26,12 @@ class App {
 		    'root' => '/home/vagrant/Code/sample-rollbar-php'
 		);
 		\Rollbar::init($config);
-
-		// Set up Rollbar with Monolog
-	}
-
-	public function out(string $message)
-	{
-		$this->log->info($message);
 	}
 
 	public function run()
 	{
+
+		$this->out("Welcome to Rollbar Sample App");
 
 		$this->sendMessage("Test message sent to Rollbar with level 'info'.", "info");
 		$this->out("Sent message to Rollbar.");
@@ -50,6 +45,13 @@ class App {
 		$this->out("Triggering an uncaught exception.");
 		$this->uncaughtException("This is an uncaught exception that should be automatically sent to Rollbar.");
 
+		$this->out("After uncaught exception");
+
+	}
+
+	public function out(string $message)
+	{
+		$this->log->info($message);
 	}
 
 	public function sendMessage(string $msg, string $level = 'info')
