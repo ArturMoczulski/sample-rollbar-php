@@ -1,11 +1,10 @@
 {
-    "name": "drawmyattention/php-project-boilerplate",
-    "description": "PHP boilerplate including PSR-4 autoloading, PHPUnit test config (with separate PSR-2 namespace), and Travis CI.",
+    "name": "arturmoczulski/sample-rollbar-php",
     "license": "MIT",
     "authors": [
         {
-            "name": "Amo Chohan",
-            "email": "amo.chohan@gmail.com"
+            "name": "Artur Moczulski",
+            "email": "artur.moczulski@gmail.com"
         }
     ],
     "require": {
