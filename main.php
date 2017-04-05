@@ -2,4 +2,4 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-\SampleRollbarPHP\App::main();
+(new \SampleRollbarPHP\App())->run();
