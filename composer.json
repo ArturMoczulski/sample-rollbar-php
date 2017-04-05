@@ -8,7 +8,9 @@
             "email": "amo.chohan@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+      "rollbar/rollbar":"~0.18.2"
+    },
     "require-dev": {
       "phpunit/phpunit": "~4.0"
     },
