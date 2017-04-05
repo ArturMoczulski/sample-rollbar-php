@@ -15,13 +15,13 @@
     },
     "autoload": {
       "psr-4": {
-        "DrawMyAttention\\MyProject\\" : "src"
+        "SampleRollbarPHP\\" : "src/SampleRollbarPHP"
       },
     "files": ["config.php"]
     },
     "autoload-dev": {
       "psr-0": {
-        "MyProjectTests\\": "tests/"
+        "SampleRollbarPHPTests\\": "tests/SampleRollbarPHPTests"
       }
     }
 }
